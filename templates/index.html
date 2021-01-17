@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body onload="ready()">
+    <nav class="navbar bg-dark text-white">
+        <h1 class="navbar-brand">PyCode</h1>
+        <form class="form-inline">
+            <h6 style="color:white;margin-right:1rem;">Editor Theme:</h6>
+            <select id="themeIp" class="form-control" style="width:15rem;" onchange="changeTheme(this.value)">
+                <option selected value="dracula">Dracula</option>
+                <option value="twilight">Twilight</option>
+                <option value="xcode">XCode</option>
+                <option value="tomorrow_night_blue">Tomorrow Night Blue</option>
+                <option value="solarized_light">Solarized(Light)</option>
+                <option value="solarized_dark">Solarized(Dark)</option>
+                <option value="cobalt">Cobalt</option>
+            </select>
+        </form>
+    </nav>
+    <div class="container row mt-4 mx-auto">
+        <div class="col-md-6">
+            <div id="editor" style="height:30rem;"></div>
+            <button onclick="run()" class="btn btn-sm btn-success mt-2">Run ></button>
+        </div>
+        <div class="col-md-6" id ="out" style="overflow-y:auto;height:30rem;background:rgb(41, 36, 36);color:greenyellow;">
+             
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js" integrity="sha512-GZ1RIgZaSc8rnco/8CXfRdCpDxRCphenIiZ2ztLy3XQfCbQUSCuk8IudvNHxkRA3oUg6q0qejgN/qqyG1duv5Q==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ext-language_tools.min.js" integrity="sha512-8qx1DL/2Wsrrij2TWX5UzvEaYOFVndR7BogdpOyF4ocMfnfkw28qt8ULkXD9Tef0bLvh3TpnSAljDC7uyniEuQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ext-themelist.min.js" integrity="sha512-5CwAfXQtNsk5OzybMAJ3U14TStTq6jUHJoWxu58KOyioLXO3fX6FPUKaYp/2iF6yZMkv38fvh3nH+Vq94R2BUg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/mode-python.min.js" integrity="sha512-2Ke4vMGrMfYRM55pT1aA5bw7Pl82Sc7K5Hg8XZYZu+EQrb0AO1mNYTagwZm+MFVAImYS9Mlnm73zcgc01wPXxA==" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
